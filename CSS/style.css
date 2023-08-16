@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nav-section */
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #E4F5F9;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+nav .icon {
+    font-size: 35px;
+    font-weight: 800;
+    color: darkcyan;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ul li {
+    margin: 0 2px;
+    position: relative;
+}
+
+nav ul li a {
+    color: darkcyan;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background: lightgrey;
+    color: #0000008d;
+}
+
+nav ul li ul{
+    position: absolute;
+    left: 0;
+    width: 190px;
+    background: #fff;
+    display: none;
+}
+
+nav ul li:hover ul{
+    display: block;
+}
+
+nav ul li ul li{
+    position: relative;
+    width: 100%;
+    padding: 2px 0; 
+    border: 1px solid #00000033;
+    text-align: start;
+}
+
+nav .search_box input {
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 60%;
+    padding: 0p 10px;
+    font-size: 20px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 10px
+}
+
+.search-button {
+    background: #fff;
+    outline: none;
+    border-radius: 5px;
+    color: #0000009b;
+    padding: 5px 5px;
+    border: 2px solid #e7e7e7;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+nav .bar {
+    position: relative;
+    margin: auto;
+    display: none;
+}
+
+nav .bar span {
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+}
+
+.sub-menu-1{
+    display: none;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+}
+
+@media screen and (max-width: 1240px) {
+    nav {
+        display: block;
+        padding: 0;
+    }
+
+    nav .icon {
+        display: inline-block;
+        padding: 15px 30px;
+    }
+
+    nav .search_box {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    nav .search_box input {
+        height: 60%;
+        width: 80%;
+        margin-top: 3px;
+    }
+
+    nav ul {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        background: #fff;
+        height: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: darkcyan;
+        font-size: 20px;
+        padding: 25px;
+        display: block;
+    }
+
+    nav ul li a:hover {
+        background: none;
+        color: #0000008d;
+    }
+
+    nav ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul li ul li{
+        border: none;
+    }
+
+    nav ul li ul li a{
+        font-size: 12px;
+        padding: 5px;
+        text-align: center;
+    }
+
+    nav .bar {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        cursor: pointer;
+    }
+
+    nav .bar #times {
+        display: none;
+    }
+    #check:checked~nav .bar #times {
+        display: block;
+    }
+
+    #check:checked~nav .bar #bars {
+        display: none;
+    }
+
+    #check:checked~nav ul {
+        visibility: visible;
+        height: 100%;
+    }
+}
+
+/* Mail section */
+
+.mail-deals {
+    background-color: #fff;
+    margin: 30px;
+    border: 2px solid #252B48;
+    border-radius: 5px;
+}
+
+.mail-head{
+    background-color: #313866;
+    padding: 5px 0 5px 15px;
+    color: #F5F5F5;
+    text-transform: capitalize;
+}
+
+.mail-body{
+    background-color: #fff;
+    padding: 15px 20px 25px;
+}
+
+.mail-header{
+    text-align: center;
+    font-weight: 400;
+}
+
+.mail-box{
+    padding-top: 13px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mail-entry{
+    width: 1000px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #EEEEEE;
+    font-size: 17px;
+}
+
+.mail-button{
+    background: #723881;
+    color: #fff;
+    margin: 5px;
+    width: 170px;
+    padding: 0px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.mail-body p{
+    font-size: 12px;
+    color: gray;
+    padding: 7px 0 17px 3px;
+}
+
+@media screen and (max-width: 1300px){
+    .mail-entry{
+        width: 100%;
+    }
+    .mail-button{
+        width: 100%;
+        /* display: block; */
+        height: 40px;
+    }
+}
+
+/* Brand-logo */
+.top-brand h3{
+    padding-left: 75px;
+    font-weight: 900;
+    color: darkcyan;
+}
+.brand-logo{
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.row img{
+    flex: 1;
+    max-width: 16%;
+    padding: 50px 20px 10px 50px;
+ }
+
+ @media screen and (max-width: 950px){
+    .row img{
+        max-height: 200px;
+        max-width: 33%;
+     }
+}
+
+@media screen and (max-width: 550px){
+    .row img{
+        max-height: 200px;
+        max-width: 50%;
+     }
+}
+
+/* footer */
+footer{
+    background-color: #E3F4F4;
+}
+
+.foot{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+.in-br-pa{
+    flex: 1;
+    max-width: 50%;
+}
+
+.in-br-pa h3{
+    color: darkcyan;
+    font-weight: 600;
+    padding: 5px 0 15px 0;
+}
+
+.in-br-pa ul{
+    list-style: none;
+}
+
+.in-br-pa ul li{
+    line-height: 1.5;
+}
+
+.in-br-pa ul li a{
+    color: darkcyan;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.in-br-pa ul li a:hover{
+    color: #0000008d;
+}
+
+.in-br-pa-x{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.in-br-pa-x ul{
+    flex: 1;
+}
+
+.copyRight{
+    margin: auto;
+    color: darkcyan;
+    font-size: 15px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    .foot{
+        flex-direction: column;
+    }
+    .in-br-pa-x{
+        flex-direction: column;
+    }
+    .in-br-pa{
+        padding-bottom: 20px;
+    }
+}
